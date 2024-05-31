@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Metrophobic", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+#nav {
+  height: 110px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+img {
+  width: 5em;
+  height: 5em;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.sidenav img {
+  width: 3em;
+  height: 3em;
+}
+
+.sidenav section {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.sidenav div:first-child {
+  display: flex;
+}
+
+.sidenav a {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sidenavTitle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.sidenav .closebtn {
+  top: 0;
+  font-size: 36px;
+}
+
+.sideNavItemContainer {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sideNavItem {
+  width: 100%;
+  display: flex;
+}
+
+
+.desktopLinks div:last-child{
+  background: #ffa235;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.underline:hover,
+.underline.active {
+  text-decoration: underline #007bfe;
+  text-underline-offset: 5px;
+}
+
+.sideNavItem div {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+hr {
+  border: 1px solid #bcbcbc;
+  margin: auto;
+  width: 80%;
+}
+/*---Search---*/
+.search-container {
+  position: relative;
+  width: 100%; /* Adjust the width as needed */
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px; /* Add space for the button */
+  box-sizing: border-box;
+  font-size: 16px;
+  border: 1px solid #bcbcbc;
+  border-radius: 10px; /* Rounded corners */
+}
+
+.search-button {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 760px) {
+  #mySidenav{
+    visibility: hidden;
+  }
+  #hamburger {
+    visibility: hidden;
+  }
+  #nav {
+    justify-content: left;
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+  }
+
+  .desktopLinks {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+  }
+  .desktopLinks a {
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    color: black;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 760px) {
+  .desktopLinks {
+    display: none;
+  }
+}
